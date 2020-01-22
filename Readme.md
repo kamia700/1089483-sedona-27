@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Anastasia](https://up.htmlacademy.ru/htmlcss/27/user/1089483).
-* Наставник: `Неизвестно`.
+* Наставник: [Лиза Позднякова](https://htmlacademy.ru/profile/lizzy).
 
 ---
 
