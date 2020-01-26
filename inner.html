@@ -7,22 +7,22 @@
   <body>
 
     <header class="main-header">
+        <a class="main-header-logo" href = "index.html">
+          <img src="img/index-logo.png" width="135" height="70" alt="Логотип страницы «Sedona»">
+        </a>
         <nav class="main-nav">
-          <a class="main-header-logo" href = "index.html">
-            <img src="img/index-logo.png" width="135" height="70" alt="Логотип страницы «Sedona»">
-          </a>
           <ul class="site-nav">
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
             <li><a href="#">Карта штата</a></li>
-            <li class="site-navigation-current"><a href="hotels.html">Гостиницы</a></li>
+            <li class="site-navigation-current"><a href="#">Гостиницы</a></li>
           </ul>
         </nav>
     </header>
     <main class="container">
         <section class="search-results-container">
               <!-- Здесь будет форма -->
-              <button type="button-show">Показать</button>
+              <button class="button-show" type="button">Показать</button>
         </section>
         <section>
             <!-- Здесь будет блок сортировки -->
@@ -30,23 +30,19 @@
         <section class="results">
             <ul class="result-list">
                 <li class="result-item">
-                    <p>
-                        <img src="img/result-item-1.jpg" width="135" height="90" alt="Фото 1">
-                    </p>
-                    <a class = "listing-title" href = "index.html">
-                        <p>Amara Resort & Spa</p>
-                    </a>
+                    <img src="img/result-item-1.jpg" width="135" height="90" alt="Фото 1">
+                    <a class = "listing-title" href = "index.html">Amara Resort & Spa</a>
                     <p class = "property-type">Гостиница</p>
                     <p class = "property-price">От 4000 Р.</p>
-                    <button type="show-more">Подробнее</button>
-                    <button type="button-booking">Забронировать</button>
+                    <a href="#" class="show-more">Подробнее</a>
+                    <a href="#" class="booking">Забронировать</a>
                     <ul class="rate">
                         <li class="star"></li>
                         <li class="star"></li>
                         <li class="star"></li>
                         <li class="star"></li>
                     </ul>
-                    <p class="review_count">Рейтинг: 8,5</p>
+                    <p class="review-count">Рейтинг: 8,5</p>
                 </li>
                 <li class="result-item">
                     <p>
@@ -57,14 +53,14 @@
                     </a>
                     <p class = "property-type">Мотель</p>
                     <p class = "property-price">От 3000 Р.</p>
-                    <button type="show-more">Подробнее</button>
-                    <button type="button-booking">Забронировать</button>
+                    <a href="#" class="show-more">Подробнее</a>
+                    <a href="#" class="booking">Забронировать</a>
                     <ul class="rate">
                         <li class="star"></li>
                         <li class="star"></li>
                         <li class="star"></li>
                     </ul>
-                    <p class="review_count">Рейтинг: 8,9</p>
+                    <p class="review-count">Рейтинг: 8,9</p>
                 </li>
                 <li class="result-item">
                     <p>
@@ -75,35 +71,39 @@
                     </a>
                     <p class = "property-type">Апартаменты</p>
                     <p class = "property-price">От 2000 Р.</p>
-                    <button type="show-more">Подробнее</button>
-                    <button type="button-booking">Забронировать</button>
+                    <a href="#" class="show-more">Подробнее</a>
+                    <a href="#" class="booking">Забронировать</a>
                     <ul class="rate">
                         <li class="star"></li>
                         <li class="star"></li>
                     </ul>
-                    <p class="review_count">Рейтинг: 9,2</p>
+                    <p class="review-count">Рейтинг: 9,2</p>
                 </li>
             </ul>
         </section>
     </main>
     <footer class="main-footer">
-        <p class="footer-contacts">
-          #visitSEDONA<br>
+      <div class="footer-contacts"></div>
+        <p class = "footer-inst">
+          #visitSEDONA
+        </p>
+        <p class = "footer-phone">
           Тел: +7(495) 666-02-66
         </p>
-        <div class="footer-social">
-          <ul>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
-        </div>
-        <p class="footer-copyright">
-          Website by: 
-          <a class="footer-logo" href="https://htmlacademy.ru" >
-            <img src="img/footer-logo.svg" width="115" height="40" alt="Логотип HTML Academy">
-          </a>
-        </p>
+      </div>
+      <div class="footer-social">
+        <ul>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+      <p class="footer-copyright">
+        Website by: 
+        <a class="footer-logo" href="https://htmlacademy.ru/intensive/htmlcss" >
+          <img src="img/footer-logo.svg" width="115" height="40" alt="Логотип HTML Academy">
+        </a>
+      </p>
     </footer> 
   </body>
 </html>

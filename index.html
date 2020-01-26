@@ -6,10 +6,10 @@
   </head>
   <body>
     <header class="main-header">
+      <a class="main-header-logo">
+        <img src="img/index-logo.png" width="135" height="70" alt="Логотип страницы «Sedona»">
+      </a>
       <nav class="main-nav">
-        <a class="main-header-logo">
-          <img src="img/index-logo.png" width="135" height="70" alt="Логотип страницы «Sedona»">
-        </a>
         <ul class="site-nav">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
@@ -17,16 +17,17 @@
           <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
-      <div class="promo">
+    </header>
+    <main class="container">
+      
+      <h1 class = "visually-hidden">Седона</h1>
+
+      <section class="promo">
         <img src="img/welcome-photo.png" width=460 height="355" alt="Welcome">
         <p class = "promo-title">Седона — небольшой городок в Аризоне,
           заслуживающий большего!</p>
         <p class = "promo-text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-      </div>
-    </header>
-    <main class="container">
-      
-      <h1 class = "visually-hidden">Sedona</h1>
+      </section>
            
       <section class = "booking-form">
         <h2>Заинтересовались?</h2>
@@ -34,14 +35,18 @@
           и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <button  class="button-open" type="button">Поиск гостиницы в Седоне</button>
           <!-- Здесь будет форма -->
-          <button type="button-search">Найти</button>
+          <button class="button-search" type="button">Найти</button>
       </section>
     </main>
     <footer class="main-footer">
-      <p class="footer-contacts">
-        #visitSEDONA<br>
-        Тел: +7(495) 666-02-66
-      </p>
+      <div class="footer-contacts"></div>
+        <p class = "footer-inst">
+          #visitSEDONA
+        </p>
+        <p class = "footer-phone">
+          Тел: +7(495) 666-02-66
+        </p>
+      </div>
       <div class="footer-social">
         <ul>
           <li><a href="#">Twitter</a></li>
@@ -51,7 +56,7 @@
       </div>
       <p class="footer-copyright">
         Website by: 
-        <a class="footer-logo" href="https://htmlacademy.ru" >
+        <a class="footer-logo" href="https://htmlacademy.ru/intensive/htmlcss" >
           <img src="img/footer-logo.svg" width="115" height="40" alt="Логотип HTML Academy">
         </a>
       </p>
