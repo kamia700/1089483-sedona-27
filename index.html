@@ -19,7 +19,6 @@
       </nav>
     </header>
     <main class="container">
-      
       <h1 class="visually-hidden">Седона</h1>
 
       <section class="intro-block">
@@ -92,10 +91,42 @@
           и мы покажем вам лучшие предложения гостиниц в седоне</p>
 
         <button  class="button-open" type="button">Поиск гостиницы в Седоне</button>
-        <form class="search-form" action="#" method="get">
-          <!-- Здесь будет форма -->
+        <form class="search-form" action="http://echo.htmlacademy.ru" method="post">
+           <p class="search-item">
+            <label for="search-date-checkin">Дата заезда:</label>
+            <input id="search-date-checkin" type="text" name="date" value="" placeholder="24 апреля 2017">
+            <button type="button" aria-label="Открыть календарь с выбором даты заезда"></button>
+          </p>
 
-          <button class="button-search" type="button">Найти</button>
+          <p class="search-item">
+            <label for="search-date-checkout">Дата выезда:</label>
+            <input id="search-date-checkout" type="text" name="date" value="" placeholder="4 июля 2017">
+            <button type="button" aria-label="Открыть календарь с выбором даты выезда"></button>
+          </p>
+
+          <p class="search-item">
+            <label for="adults">Взрослые:</label>
+            <button type="button" aria-label="Уменьшить количество взрослых">
+              <span>-</span>
+            </button>
+            <input id="adults" type="text" name="amount" value="2">
+            <button type="button" aria-label="Увеличить количество взрослых">
+              <span>+</span>
+            </button>
+          </p>
+
+          <p class="search-item">
+            <label for="children">Дети:</label>
+            <button type="button" aria-label="Уменьшить количество детей">
+              <span>-</span>
+            </button>
+            <input id="children" type="text" name="amount" value="0">
+            <button type="button" aria-label="Увеличить количество детей">
+              <span>+</span>
+            </button>
+          </p>
+
+          <a class="search-link" href="inner.html">Найти</a>
         </form>
       </section>
 
@@ -103,6 +134,7 @@
         <img src="img/map.png" width="100%" height="40%" alt="Карта города Седона">
       </section>
     </main>
+
     <footer class="main-footer">
       <div class="footer-contacts">
         <p class="footer-inst">
@@ -114,9 +146,9 @@
       </div>
       <div class="footer-social">
         <ul>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
+          <li><a href="http://twitter.com/" aria-label="Твиттер"></a></li>
+          <li><a href="http://facebook.com/" aria-label="Фейсбук"></a></li>
+          <li><a href="http://instagram.com/" aria-label="Инстаграм"></a></li>
         </ul>
       </div>
       <p class="footer-copyright">
