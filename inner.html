@@ -65,18 +65,18 @@
 
           <fieldset>
             <legend>Стоимость в сутки (Р):</legend>
-            <label class="visually-hidden" for="min-cost">Выбрать минимальную стоимость</label>
-            <span>От</span>
-            <input type="text" name="min-cost" id="min-cost" value="0">
+            <label for="min-cost" aria-label="Выбрать минимальную стоимость">От</label>
+            <input type="number" name="min-cost" id="min-cost" value="0">
 
-            <label class="visually-hidden" for="max-cost">Выбрать максимальную стоимость</label>
-            <span>До</span>
-            <input type="text" name="max-cost" id="max-cost" value="3000">
+            <label for="max-cost" aria-label="Выбрать максимальную стоимость">До</label>
+            <input type="number" name="max-cost" id="max-cost" value="3000">
+
             <div>
-              <button type="trackbar-button"></button>
+              <button class="trackbar-button" type="button"></button>
               <div></div>
-              <button type="trackbar-button"></button>
+              <button class="trackbar-button" type="button"></button>
             </div>
+            
           </fieldset>
           <button class="filter-btn" type="submit">Показать</button>
       </form>
@@ -127,9 +127,7 @@
                 </li>
                 
                 <li class="result-item">
-                  <p>
-                    <img src="img/result-item-2.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
-                  </p>
+                  <img src="img/result-item-2.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
                   <a class="listing-title" href="index.html">Desert Quail Inn</a>
 
                   <p class="property-type">Мотель</p>
@@ -145,9 +143,7 @@
                 </li>
 
                 <li class="result-item">
-                  <p>
-                    <img src="img/result-item-3.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
-                  </p>
+                  <img src="img/result-item-3.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
                   <a class="listing-title" href = "index.html">Villas at Poco Diablo</a>
 
                   <p class="property-type">Апартаменты</p>
