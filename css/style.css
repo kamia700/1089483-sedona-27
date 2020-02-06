@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    padding: 0;
+  
+    font-family: 'PT Serif', Arial, serif;
+    font-size: 14px;
+    color: #000000;
+    text-transform: uppercase;
+
+    background-color: #f2f2f2;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    font: inherit;
+  
+    text-align: center;
+    color: #ffffff;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    border: none;
+}
+
+.main-nav {
+    font: inherit;
+    line-height: 26px;
+    
+    background-color: #ffffff;
+}
+
+.site-nav {
+    list-style: none;
+}
+
+.site-nav a{
+    color: #000000;
+    font-weight: 700;
+}
+
+.site-nav a:hover {
+    color: #81b3d2;
+}
+
+.site-nav a:focus {
+    color:rgba(0, 0, 0, 0.3);
+}
+
+.site-nav a:active {
+    color:#766357;
+}
+
+.container p{
+    color:#333333;
+    font-size: 14px;
+}
+
+.intro-block {
+    text-align: center;
+    line-height: 26px;
+
+    background-color: #81B3D2;
+    background-image: url("../img/bg-index.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;      
+}
+
+.intro-pic:after {
+    content: url("../img/intro-mask.svg");
+}
+
+.intro-text{
+    background-color: #ffffff;   
+    
+}
+
+.intro-block h2{
+    font-size: 21px;
+}
+
+.search {
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.search h2{
+    line-height: 30px;
+    font-size: 36px;
+}
+
+.search p{
+    line-height: 24px;
+}
+
+.button-open {
+    background-color: #766357;
+}
+
+.button-open:hover {
+    background-color: #604e43;
+}
+
+.button-open:active {
+    background-color: #503e33;
+    color: #928a85;
+}
+
+.search-item {
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.search-item input {
+    font: inherit;
+    text-transform:uppercase;
+
+    background-color: #f2f2f2;
+    border: none;
+}
+
+.search-item input:hover {
+    background-color: #ebebeb;
+    border: none;
+}
+
+.search-item input:focus {
+    border: 2px solid #e5e5e5;
+    background-color: #ffffff;
+}
+
+.button-search {
+    background-color: #81b3d2;
+}
+
+.button-search:hover {
+    background-color: #669ec0;
+}
+
+.button-search:active {
+    background-color: #5496bd;
+    color: #94b9d2;
+}
+
+.main-footer {
+    background-color: #ffffff;
+}
+
+.footer-contacts a {
+    color: #000000;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.footer-contacts .footer-inst {
+    text-decoration: underline;
+}
+
+.footer-social {
+    text-align: center;
+}
+  
+.footer-social ul {
+    list-style: none;
+}
+  
+.social-button {
+    color: #ffffff;
+}
+
+.footer-copyright {
+    text-align: center;
+    color: #262626;
+}
+
+/* inner.html */
+.site-navigation-current a,
+.site-navigation-current a:hover,
+.site-navigation-current a:focus,
+.site-navigation-current a:active {
+    color: #766357;
+}
+
+.results {
+    background-color: #ffffff;
+}
+
+.result-list{
+    list-style: none;
+}
+
+.results .listing-title {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.result-item {
+    border-top: 1px solid #e5e5e5;
+}
+
+.result-item:last-child {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.results .listing-title:hover,
+.results .listing-title:focus {
+    color: #81b3d2;
+}
+
+.results .listing-title:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.results .show-more{
+    background-color: #81b3d2;
+    font-weight: 700;
+}
+
+.results .show-more:hover,
+.results .show-more:focus{
+    background-color: #669ec0;
+}
+
+.results .show-more:active{
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #5496bd;
+}
+
+.results .booking{
+    background-color: #766357;
+    font-weight: 700;
+}
+
+.results .booking:hover,
+.results .booking:focus{
+    background-color: #604e43;
+}
+
+.results .booking:active{
+    background-color: #503e33;
+    color: #928a85;
+}
+
+.results .review-count{
+    color: #666666;
+    background-color: #f2f2f2;
+}
+
+
