@@ -2,13 +2,13 @@ body {
     margin: 0;
     padding: 0;
   
-    font-family: 'PT Serif', Arial, serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     font-size: 14px;
+    line-height: 21px;
     color: #000000;
     text-transform: uppercase;
 
     background-color: #f2f2f2;
-    background-position: top center;
     background-repeat: no-repeat;
 }
 
@@ -39,7 +39,7 @@ a {
 }
 
 .main-nav {
-    font: inherit;
+    font-size: 14px;
     line-height: 26px;
     
     background-color: #ffffff;
@@ -68,12 +68,10 @@ a {
 
 .container p{
     color:#333333;
-    font-size: 14px;
 }
 
 .intro-block {
     text-align: center;
-    line-height: 26px;
 
     background-color: #81B3D2;
     background-image: url("../img/bg-index.jpg");
@@ -87,12 +85,17 @@ a {
 }
 
 .intro-text{
-    background-color: #ffffff;   
-    
+    background-color: #ffffff;      
 }
 
 .intro-block h2{
     font-size: 21px;
+    line-height: 26px;
+}
+
+.intro-block з{
+    font-size: 14px;
+    line-height: 26px;
 }
 
 .search {
@@ -107,6 +110,7 @@ a {
 
 .search p{
     line-height: 24px;
+    font-size: 14px;
 }
 
 .button-open {
