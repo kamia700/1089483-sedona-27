@@ -7,26 +7,30 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+
+  <body class="container">
+    
     <header class="main-header">
       <a class="main-header-logo">
         <img src="img/logo-sedona.svg" width="135" height="70" alt="Логотип страницы «Sedona»">
       </a>
       <nav class="main-nav">
-        <ul class="site-nav">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
-        </ul>
+          <ul class="site-nav">
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Фото и видео</a></li>
+            <li><a href="#">Карта штата</a></li>
+            <li><a href="hotels.html">Гостиницы</a></li>
+          </ul>
       </nav>
     </header>
-    <main class="container">
+
+    <main>
       <h1 class="visually-hidden">Седона</h1>
 
       <section class="intro-block">
+
         <div class="intro-pic">
-          <img src="img/intro-welcome.svg" width="460" height="355" alt="Добро пожаловать в великолепную Седону">
+          <img src="img/intro-welcome.svg" width="462" height="420" alt="Добро пожаловать в великолепную Седону">
         </div>
         <div class="intro-text">
           <h2 class="intro-title">Седона — небольшой городок в Аризоне,
@@ -97,44 +101,45 @@
 
       <section class="search">
         
-        <h2 class="search-title">Заинтересовались?</h2>
-        <p>Укажите предполагаемые даты поездки, 
+        <h2>Заинтересовались?</h2>
+        <p class="search-text">Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <div class="modal">
+          <button  class="button button-open" type="button">Поиск гостиницы в Седоне</button>
+          <form class="search-form" action="http://echo.htmlacademy.ru" method="post">
+            <p class="search-item">
+              <label for="search-date-checkin">Дата заезда:</label>
+              <input id="search-date-checkin" type="text" name="date" value="" placeholder="24 апреля 2017">
+              <button type="button" aria-label="Открыть календарь с выбором даты заезда"></button>
+            </p>
 
-        <button  class="button button-open" type="button">Поиск гостиницы в Седоне</button>
-        <form class="search-form" action="http://echo.htmlacademy.ru" method="post">
-          <p class="search-item">
-            <label for="search-date-checkin">Дата заезда:</label>
-            <input id="search-date-checkin" type="text" name="date" value="" placeholder="24 апреля 2017">
-            <button type="button" aria-label="Открыть календарь с выбором даты заезда"></button>
-          </p>
+            <p class="search-item">
+              <label for="search-date-checkout">Дата выезда:</label>
+              <input id="search-date-checkout" type="text" name="date" value="" placeholder="4 июля 2017">
+              <button type="button" aria-label="Открыть календарь с выбором даты выезда"></button>
+            </p>
 
-          <p class="search-item">
-            <label for="search-date-checkout">Дата выезда:</label>
-            <input id="search-date-checkout" type="text" name="date" value="" placeholder="4 июля 2017">
-            <button type="button" aria-label="Открыть календарь с выбором даты выезда"></button>
-          </p>
+            <p class="search-item">
+              <label for="adults">Взрослые:</label>
+              <button type="button" aria-label="Уменьшить количество взрослых">
+              </button>
+              <input id="adults" type="number" name="amount" value="2">
+              <button type="button" aria-label="Увеличить количество взрослых">
+              </button>
+            </p>
 
-          <p class="search-item">
-            <label for="adults">Взрослые:</label>
-            <button type="button" aria-label="Уменьшить количество взрослых">
-            </button>
-            <input id="adults" type="number" name="amount" value="2">
-            <button type="button" aria-label="Увеличить количество взрослых">
-            </button>
-          </p>
+            <p class="search-item">
+              <label for="children">Дети:</label>
+              <button type="button" aria-label="Уменьшить количество детей">
+              </button>
+              <input id="children" type="number" name="amount" value="0">
+              <button type="button" aria-label="Увеличить количество детей">
+              </button>
+            </p>
 
-          <p class="search-item">
-            <label for="children">Дети:</label>
-            <button type="button" aria-label="Уменьшить количество детей">
-            </button>
-            <input id="children" type="number" name="amount" value="0">
-            <button type="button" aria-label="Увеличить количество детей">
-            </button>
-          </p>
-
-          <button class="button button-search" type="button">Найти</button>
-        </form>
+            <button class="button button-search" type="button">Найти</button>
+          </form>
+        </div>
       </section>
 
       <section class="map">

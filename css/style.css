@@ -212,6 +212,11 @@ a {
 
 
 /* Footer block*/
+
+.main-footer{
+    background-color: #ffffff;
+}
+
 .footer-contacts a {
     color: #000000;
     font-size: 21px;
@@ -401,4 +406,216 @@ a {
     background-color: #f2f2f2;
 }
 
+
+
+
+
+
+/* ----- Сеточные стили ----- */
+
+/* index.html */
+
+html,
+body {
+  min-width: 1280px;
+  min-height: 2762px;
+}
+
+ /* body {
+    /* Временно для сетки */
+     /* background-image: url('../img/sedona-index.jpg');
+    background-size: 1200px auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    OUTLINE: 4px solid green;
+}  */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 0;
+  
+    /* box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2); */
+}
+
+.main-header-logo {
+    display: block;
+
+    width: 140px;
+    height: 70px;
+
+    margin: 0 auto;
+    margin-bottom: -75px;
+}
+
+.main-nav {
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav {
+    margin: 0;
+    padding: 0;
+
+    display:flex;
+    justify-content:space-between; 
+}
+
+.site-nav li{
+    width:239px;
+    text-align: center;
+
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+/* не уверена! если добавить еще элементы 
+в список, то работать не будет 
+(можно попробовать формулу 4n-2 и разрешить перенос строк
+или можно разбить на 2 списка)*/
+.site-nav li:nth-child(2){
+    margin-right: auto;
+}
+
+.main-header img {
+    max-width: 100%;
+}
+
+.intro-block img{
+    display: block;
+    margin: 0 auto;   
+}
+
+.intro-text{
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+.intro-title, 
+.intro-text p{
+    width:495px;
+    margin: 0 auto;
+}
+
+.search{
+    padding-top:55px;
+}
+
+.search h2 {
+    margin-bottom: 30px;
+}
+
+.search .search-text {
+    margin: 0 auto;
+    width:440px;
+    margin-bottom: 50px;
+}
+
+/* .modal {
+    position: relative;
+}
+
+.search-form {
+    position: absolute;
+    width: 575px;
+    background-color: #ffffff;
+    
+} */
+
+.main-footer{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0;
+
+    display:flex;
+    justify-content: space-around;
+}
+
+.footer-contacts{
+    width:230px;
+}
+
+.footer-social{
+    margin: 0;
+    padding:0;
+    width:155px;
+}
+
+.footer-copyright{
+    width:200px;
+}
+
+/* inner.html */
+
+.results{
+    margin: 0 auto;
+}
+
+.result-list{
+    padding: 0;
+    margin-left:70px;
+    margin-right: 70px;
+}
+
+.result-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    display:flex; 
+}
+
+/* Можно ли явно задавать размер картинке?*/
+.result-item img{
+    width:135px;
+
+    margin-right: 30px;
+    align-self:center;
+} 
+
+.result-item .property{
+    width:260px;
+
+    display:flex; 
+    flex-direction: column;
+
+} 
+
+.property-text{
+    width:190px;
+
+    display:flex;
+    justify-content: space-between; 
+} 
+
+.property-buttons{
+    width:260px;
+
+    display:flex;
+    justify-content: space-between;
+} 
+
+.property-buttons .show-more{
+    width:110px;
+} 
+
+.property-buttons .booking{
+    width:145px;
+} 
+
+
+.result-item .rating{
+    width:112px;
+    text-align: center;
+    margin-left: auto;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
