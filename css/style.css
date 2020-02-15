@@ -53,6 +53,7 @@ a {
     color: #ffffff;
     vertical-align: middle;
     text-transform: uppercase;
+    font-weight:bold;
 
     border: none;
 }
@@ -173,8 +174,19 @@ a {
 
 
 /* Features */
-.benefits-list{
-    list-style: none;
+.features{
+    display:flex;
+    flex-direction:column;
+
+}
+
+.features-first{
+    display:flex;
+    flex-direction:row-reverse;
+}
+
+.features-second{
+    display:flex;
 }
 
 .features h2,
@@ -184,13 +196,19 @@ a {
 
 .wrapper-text{
     background-color: #81b3d2;
+    padding:0 50px;
+    
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
 .features h2{
     font-size: 21px;
     line-height: 21px;
     font-weight: 700;
-}
+}    
 
 .features-title{
     color: #ffffff;
@@ -201,14 +219,36 @@ a {
     color: #ffffff;
 }
 
-.benefits-title{
-    color: #000000;
-}
-
-.features .benefits-first{
+.benefits-first{
     background-color: #ffffff;
 }
 
+.benefits-first{
+    background-color: #ffffff;
+}
+
+.benefits-list{
+    margin: 0;
+    padding:0;
+
+    display:flex;
+    justify-content: space-around;
+}
+
+.benefits-first li{
+      width:285px; 
+}
+
+.benefits-second li{
+    width:255px; 
+}
+.benefits-list{
+    list-style: none;
+
+}
+.benefits-title{
+    color: #000000;
+}
 
 /* Search block*/
 .search{
@@ -235,6 +275,10 @@ a {
 }
 
 .button-open {
+    padding:30px 140px;
+    font-size: 21px;
+    line-height: 26px;
+
     background-color: #766357;
 }
 
@@ -247,7 +291,19 @@ a {
     color: #928a85;
 }
 
+.modal{
+    position:relative;
+}
+.search-form{
+    background-color: #ffffff;
+
+    padding:56px;
+
+    position:absolute;
+    left:316px;
+}
 .search-item {
+    font-size: 14px;
     line-height: 26px;
     font-weight: bold;
 }
@@ -271,6 +327,10 @@ a {
 }
 
 .button-search {
+    padding:20px 195px;
+    font-size: 21px;
+    line-height: 26px;
+
     background-color: #81b3d2;
 }
 
@@ -283,9 +343,6 @@ a {
     color: #94b9d2;
 }
 
-.main-footer {
-    background-color: #ffffff;
-}
 
 
 /* Footer block*/
@@ -328,15 +385,12 @@ a {
     list-style: none;
 }
   
-.social-button {
-    color: #ffffff;
-}
-
 .footer-copyright{
     color: #262626;
     text-align: center;
-
     width:33,33%;
+
+    display:flex;
 }
 
 
@@ -359,13 +413,31 @@ a {
     background-size: cover;
 }
 
-.filter-option {
+.filter-menu{
+    display:flex;
+}
+
+
+
+.filter-option ul{
+    margin: 0;
+    padding: 0;
+}
+
+.filter li {
     list-style: none;
 }
+
+.filter-range{
+    display:flex;
+    flex-direction: column;
+}
+
 
 .filter-menu fieldset {
     border:0 none;
 }
+
 
 .filter legend {
     font-size: 16px;
@@ -391,11 +463,38 @@ a {
 
 
 /* Sorting block*/
+.sorting{
+    background-color: #ffffff;
+
+    padding: 30px 70px;
+
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+}
+
+/* не могу понять почему текст в брайзере сильно меньше,
+чем на макете */
 .match{
     font-size: 21;
     line-height: 26px;
-    font-weight: 700;
+    font-weight: bold;
     color: #000000;
+
+    width:135px;
+}
+
+.sorting-list{
+    width:365px;
+
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:space-around;
+}
+
+.sorting-arrow{
+    margin-left: auto;
 }
 
 .sorting-list p{
@@ -407,6 +506,13 @@ a {
 
 .sorting-item{
     list-style: none;
+
+    width:250px;
+    padding: 0;
+    margin:0;
+
+    display:flex;
+    justify-content:space-around;
 }
 
 .sorting-item a {
@@ -428,9 +534,11 @@ a {
     border-bottom: none; 
 } 
 
-.sorting{
-    background-color: #ffffff;
-}
+.sorting-item-current a{
+    color: #81b3d2;
+    border-bottom: none; 
+} 
+
 
 
 /* Results block*/

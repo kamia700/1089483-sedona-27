@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body class="container">
+  <body>
     <div class="container">
       <header class="main-header">
           <a class="main-header-logo" href="index.html">
@@ -31,10 +31,10 @@
           <h2 class="visually-hidden">Фильтр для поиска жилья</h2>
           <form class="filter-menu" action="https://echo.htmlacademy.ru" method="get">
               
-            <fieldset>
+            <fieldset class="filter-option">
               <legend>Инфраструктура:</legend>
               <ul>
-                <li class="filter-option">
+                <li>
                   <input type="checkbox" name="hotel" id="pool" checked>
                   <label for="pool">Бассейн</label>
                 </li>
@@ -49,7 +49,7 @@
               </ul>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter-option">
               <legend>Тип жилья:</legend>
               <ul>
                 <li>
@@ -67,37 +67,38 @@
               </ul>
             </fieldset>
 
-            <fieldset>
-              <legend>Стоимость в сутки (Р):</legend>
-              <label for="min-cost" aria-label="Выбрать минимальную стоимость">От</label>
-              <input type="number" name="min-cost" id="min-cost" value="0">
+            <fieldset class="filter-option">
+              <div class="filter-range">
+                <legend>Стоимость в сутки (Р):</legend>
+                <label for="min-cost" aria-label="Выбрать минимальную стоимость">От</label>
+                <input type="number" name="min-cost" id="min-cost" value="0">
 
-              <label for="max-cost" aria-label="Выбрать максимальную стоимость">До</label>
-              <input type="number" name="max-cost" id="max-cost" value="3000">
-
+                <label for="max-cost" aria-label="Выбрать максимальную стоимость">До</label>
+                <input type="number" name="max-cost" id="max-cost" value="3000">
+              </div>
               <div>
                 <button class="trackbar-button" type="button"></button>
                 <div></div>
                 <button class="trackbar-button" type="button"></button>
               </div>
-              
+              <button class="filter-btn" type="submit">Показать</button>
             </fieldset>
-            <button class="filter-btn" type="submit">Показать</button>
-        </form>
+            
+          </form>
         </section>
 
         <section class="sorting">
           <h2 class="visually-hidden">Количество найденных вариантов и сортировка</h2>
 
           <div class="match">
-            Найдено: <span>3</span>
+            <p>Найдено: <span>3</span></p>
           </div>
 
           <div class="sorting-list">
             <p>Сортировка:</p>
             <ul class="sorting-item">
-              <li>
-                <a class="sorting-item-current" href="#">По цене</a>
+              <li class="sorting-item-current">
+                <a  href="#">По цене</a>
               </li>
               <li><a href="#">По типу</a></li>
               <li><a href="#">По рейтингу</a></li>
@@ -210,11 +211,12 @@
             <li><a href="http://instagram.com/" aria-label="Инстаграм"></a></li>
           </ul>
         </div>
-        <p class="footer-copyright">
-          Website by:
+        <div class="footer-copyright">
+          <p>Website by:</p>
           <a class="footer-logo" href="https://htmlacademy.ru/intensive/htmlcss" >
             <img src="img/logo-htmlacademy.svg" width="115" height="40" alt="Логотип HTML Academy">
-        </p>
+          </a>
+        </div>
       </footer> 
     </div>
   </body>
