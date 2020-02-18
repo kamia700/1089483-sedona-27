@@ -315,12 +315,12 @@ img{
 
 
 .search-form{
+    position:absolute;
+
     background-color: #ffffff;
     
     padding:55px;
     max-width:570px;
-
-    position:absolute;
 
     top:86px;
     left:50%;
@@ -350,7 +350,7 @@ img{
     align-self: center;
 }
 
-.search-item input {
+.search-item input{
     font: inherit;
     text-transform:uppercase;
 
@@ -363,7 +363,6 @@ img{
     border: none;
 }
 
-
 .search-item input:hover {
     background-color: #ebebeb;
     border: none;
@@ -373,6 +372,20 @@ img{
     border: 2px solid #e5e5e5;
     background-color: #ffffff;
 }
+
+.guests{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+
+}
+
+
+.guests input{
+    width:50px;
+}
+
+
 
 .button-search {
     padding:20px 195px;
@@ -662,10 +675,9 @@ img{
     border-bottom: 1px solid #e5e5e5;
 }
 
-/* картинка не выравнивается как на макете */
 .result-item img{
     margin-right: 30px;
-    align-self:center;
+    
 } 
 
 .results .listing-title {
@@ -689,10 +701,14 @@ img{
 
     display:flex; 
     flex-direction: column;
+    justify-content: space-between;
 } 
 
 .details{
     display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 5px;
 }
 
 .type-details{
@@ -733,19 +749,58 @@ img{
     background-color: #503e33;
     color: #928a85;
 }
-
 .rating{
     width:112px;
     text-align: center;
     margin-left: auto;
+    padding:0;
 
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
 }
+
+ .four-stars{
+    width:80px;
+    height:20px;
+    background-image: url("../img/star.svg");
+    background-size:17px;
+    background-repeat: space;
+
+    margin-bottom: 45px; 
+
+    align-self: flex-end;
+       
+    margin-top: 0;
+} 
+
+.three-stars{
+    width:65px;
+    height:20px;
+    background-image: url("../img/star.svg");
+    background-size:17px;
+    background-repeat: space;
+
+    margin-bottom: 45px;  
+    
+    align-self: flex-end; 
+} 
+
+.two-stars{
+    width:42px;
+    height:20px;
+    background-image: url("../img/star.svg");
+    background-size:17px;
+    background-repeat: space;
+
+    margin-bottom: 45px;  
+
+    align-self: flex-end; 
+} 
 
 .review-count{
     color: #666666;
     background-color: #f2f2f2;
+   
+    margin-bottom: 0;
 }
 
