@@ -40,6 +40,8 @@ body {
     margin: 0 auto;
   
     box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+
+    position: relative; 
 }
 
 a {
@@ -69,6 +71,8 @@ img{
     position:relative;
 }
 
+/* пришлось задать  z-index: 1 так как 
+лого ушел под фон */
 .main-header-logo {
     width: 140px;
     height: 70px;
@@ -78,6 +82,8 @@ img{
     top:0;
 
     transform: translateX(-50%);
+
+    z-index: 1;
 }
 
 .main-nav {
@@ -235,7 +241,6 @@ img{
     background-color: #ffffff;
 }
 
-
 .benefits-text{
     margin: 25px 55px;
 
@@ -249,7 +254,6 @@ img{
 
     display:flex;
     justify-content: space-around;
-
 }
 
 .benefits-item{
@@ -265,7 +269,6 @@ img{
 
     position: relative;
 }
-
 
 
 /* Search block*/
@@ -313,41 +316,35 @@ img{
     position:relative;
 }
 
-
 .search-form{
     position:absolute;
 
     background-color: #ffffff;
     
     padding:55px;
-    max-width:570px;
+    width:570px;
 
     top:86px;
     left:50%;
     transform: translateX(-50%);
 
     display:flex;
+    flex-direction: column;
     flex-wrap:wrap;
-    justify-content: space-between;
-
+    justify-content: space-between; 
 }
+
 .search-item {
+    position: relative;
     font-size: 14px;
     line-height: 26px;
     font-weight: bold;
-
-    width:460px;
 
     margin: 0;
     margin-bottom: 30px;
 
     display:flex;
-    justify-content: space-between;
-
-}
-
-.search-item label {
-    align-self: center;
+    justify-content: space-between;        
 }
 
 .search-item input{
@@ -357,10 +354,68 @@ img{
     box-sizing: border-box;
     padding:10px;
 
-    width:345px;
+    flex-grow: 1;
 
     background-color: #f2f2f2;
     border: none;
+}
+
+.search-item label {
+    position: relative;
+
+    align-self: center;
+
+    padding-right: 20px;
+}
+
+.calendar-icon {
+    position: absolute;
+
+    bottom: 10px;
+    right: 5px;
+
+    background-color: transparent; 
+    border: none;
+    cursor: pointer;
+}
+
+.date input{
+    padding-right:40px;
+}
+
+.calendar-icon path{
+    fill-opacity: 0.3;
+}
+
+.calendar-icon:hover path,
+.calendar-icon:focus path{
+    fill-opacity: 1;
+}
+
+.calendar-icon:active path{
+    fill-opacity: 1;
+    fill: #669ec0;
+}
+
+input[type="text"]::-moz-placeholder,
+input[type="text"]:-moz-placeholder{ 
+    color:#000000;
+    opacity: 1;
+}
+
+input[type="text"]::-webkit-input-placeholder,
+input[type="text"]:-ms-input-placeholder{
+    color:#000000;
+    opacity: 1;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .search-item input:hover {
@@ -373,19 +428,92 @@ img{
     background-color: #ffffff;
 }
 
-.guests{
-    display:flex;
+.adults,
+.children{
+    margin: 0;
+    width: 50%;
+
+    display: flex;
     justify-content: space-between;
-    flex-wrap:wrap;
-
+    align-content:space-between;
 }
 
-
-.guests input{
-    width:50px;
+.quantity{
+    display: flex;
+    justify-content: space-between;
+    
+    width: 50%;
 }
 
+.quantity input,
+.quantity input{
+    text-align: center;
+    width: 40px;
+}
+.adults label{
+    padding-right: 40px;
+}
 
+.children label{
+    padding-right:25px;
+    padding-left:50px;
+}
+
+.minus-icon,
+.plus-icon{
+    position: relative;
+    background-color: #f2f2f2; 
+
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.minus-icon::before {
+  content: "";
+
+  position: absolute;
+  top: 20px;
+  left: 15px;
+
+  width: 12px;
+  height: 3px;
+
+  background-color: #a9a9a9;
+}
+
+.plus-icon::before,
+.plus-icon::after {
+  content: "";
+
+  position: absolute;
+  top: 20px;
+  right: 15px;
+
+  width: 12px;
+  height: 3px;
+
+  background-color: #a9a9a9;
+}
+
+.plus-icon::after {
+    transform: rotate(90deg);
+}
+
+.minus-icon:hover::before,
+.minus-icon:focus::before,
+.plus-icon:hover::after,
+.plus-icon:hover::before,
+.plus-icon:focus::before,
+.plus-icon:focus::after{
+    background-color: #000000;
+}
+
+.minus-icon:active::before,
+.plus-icon:active::after,
+.plus-icon:active::before{
+    background-color: #81b3d2;
+}
 
 .button-search {
     padding:20px 195px;
@@ -405,12 +533,20 @@ img{
 }
 
 
-
 /* Footer block*/
+.footer-index{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    opacity: 0.9;
+}
+
 .main-footer{
-    background-color: #ffffff;
+    background-color: #fefefe;
 
     margin: 0;
+
     padding-top: 40px;
     padding-bottom: 40px;
 
@@ -428,6 +564,18 @@ img{
 
     display:flex;
     flex-direction: column;
+}
+
+.footer-inst:hover,
+.footer-inst:focus,
+.footer-phone:hover,
+.footer-phone:focus {
+    color: #81b3d2;
+}
+
+.footer-inst:active,
+.footer-phone:active{
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .footer-social{
@@ -467,9 +615,8 @@ img{
 
 .social-button:active path{
     background-color: #669ec0;
-    fill: #88b6d2;
+    fill-opacity: 0.3;
 }
-
 
 .footer-copyright{
     color: #262626;
@@ -479,19 +626,19 @@ img{
     padding-right:100px;
 }
 
+.footer-logo{
+    display: inline-block;
+    vertical-align:middle;
+    margin-left: 10px;
+}
+
 .footer-logo:hover path,
 .footer-logo:focus path{
     fill: #81b3d2;
 }
 
-.footer-logo:active path{
-    fill: #bdbbbc;
-}
-
-.footer-logo{
-    display: inline-block;
-    vertical-align:middle;
-    margin-left: 10px;
+.footer-logo:active{
+    fill-opacity: 0.3;
 }
 
 .footer-contacts a {
@@ -509,7 +656,6 @@ img{
 .site-nav-current a:active {
     color: #766357;
 }
-
 
 /* Filter block*/
 .filter {
@@ -543,7 +689,6 @@ img{
 .filter-menu fieldset {
     border:0 none;
 }
-
 
 .filter legend {
     font-size: 16px;
@@ -586,7 +731,6 @@ img{
     color: #000000;
 
     margin-right: 50px;
-
 }
 
 .sorting-list{
@@ -613,7 +757,6 @@ img{
     list-style: none;
 
     padding: 0;
-    /* margin-left:30px; */
 
     display:flex;
     justify-content:space-around;
@@ -649,6 +792,7 @@ img{
     border-bottom: none; 
 } 
 
+
 /* Results block*/
 .results {
     background-color: #ffffff;
@@ -669,6 +813,7 @@ img{
     display:flex;
     justify-content: center;
     align-content:center;
+    align-items:flex-start;
 }
 
 .result-item:last-child {
@@ -676,8 +821,16 @@ img{
 }
 
 .result-item img{
-    margin-right: 30px;
-    
+    margin-right: 30px;    
+} 
+
+/*при переполнении текст растягивает блок в высоту,
+а не в ширину. Не могу найти причину */
+.property{
+    display:flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
 } 
 
 .results .listing-title {
@@ -685,6 +838,7 @@ img{
     line-height: 26px;
     font-weight: 700;
     color: #000000;
+    flex-grow: 1;
 }
 
 .results .listing-title:hover,
@@ -696,14 +850,6 @@ img{
     color: rgba(0, 0, 0, 0.3);
 }
 
-.property{
-    width:260px;
-
-    display:flex; 
-    flex-direction: column;
-    justify-content: space-between;
-} 
-
 .details{
     display: flex;
     justify-content: space-between;
@@ -712,7 +858,7 @@ img{
 }
 
 .type-details{
-    margin-right: 8px;    
+    margin-right: 8px;  
 }
 
 .show-more,
@@ -731,7 +877,7 @@ img{
 }
 
 .show-more:active{
-    color: rgba(0, 0, 0, 0.3);
+    color:rgb(255,255,255, 0.3);
     background-color: #5496bd;
 }
 
@@ -783,6 +929,8 @@ img{
     margin-bottom: 45px;  
     
     align-self: flex-end; 
+
+    margin-top: 0;
 } 
 
 .two-stars{
@@ -794,6 +942,8 @@ img{
 
     margin-bottom: 45px;  
 
+    margin-top: 0;
+
     align-self: flex-end; 
 } 
 
@@ -801,6 +951,8 @@ img{
     color: #666666;
     background-color: #f2f2f2;
    
-    margin-bottom: 0;
+    margin:0;
+    padding-top:4px;
+    padding-bottom:4px;
 }
 
