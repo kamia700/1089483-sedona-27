@@ -178,7 +178,9 @@ img{
 
     padding-top: 55px;
     padding-bottom: 55px;
-
+}
+.intro-title{
+    color:#000000;
 }
 
 .intro-title, 
@@ -218,56 +220,76 @@ img{
     text-align: center;
 }
 
+.benefits-list p{
+    color:#333333;
+}
+
 .wrapper-text{
     color: #ffffff;
 
     width:33.33%;
     background-color: #81b3d2;
-    padding:0 50px;
+    padding:0 45px;
     
     display:flex;
     flex-direction:column;
     flex-wrap:wrap;
     justify-content:center;
+    align-items: center;
+    align-content: center;
 }
 
 .features h2{
     font-size: 21px;
     line-height: 21px;
     font-weight: 700;
+
+    width: 160px;
+
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 30px;
 }    
 
 .features .first{
     background-color: #ffffff;
 }
 
-.benefits-text{
-    margin: 25px 55px;
-
-}
-
 .benefits-list{
     list-style: none;
 
     margin: 0;
-    padding:0;
+    padding: 0;
 
     display:flex;
-    justify-content: space-around;
+    flex-wrap:wrap;
+    justify-content:center;
+ 
+    align-content: center;
 }
 
 .benefits-item{
+    position: relative;
+
     margin: 0;
-    margin-bottom: 25px;
-    padding: 0;
+    padding:60px 50px;
 
     width:33.33%; 
+
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    align-content: center;
+    flex-wrap:wrap;
 }
 
 .benefits-title{
     color: #000000;
+}
 
-    position: relative;
+.second .benefits-item{
+    padding:50px 60px;
 }
 
 
@@ -309,7 +331,7 @@ img{
 
 .button-open:active {
     background-color: #503e33;
-    color: #928a85;
+    color: rgb(255,255,255, 0.3);
 }
 
 .modal{
@@ -357,7 +379,8 @@ img{
     flex-grow: 1;
 
     background-color: #f2f2f2;
-    border: none;
+    border: 1px solid #f2f2f2;
+    /* border:none; */
 }
 
 .search-item label {
@@ -401,6 +424,7 @@ input[type="text"]::-moz-placeholder,
 input[type="text"]:-moz-placeholder{ 
     color:#000000;
     opacity: 1;
+
 }
 
 input[type="text"]::-webkit-input-placeholder,
@@ -420,7 +444,7 @@ input::-webkit-inner-spin-button {
 
 .search-item input:hover {
     background-color: #ebebeb;
-    border: none;
+    /* border: 1px solid #f2f2f2; */
 }
 
 .search-item input:focus {
@@ -532,6 +556,10 @@ input::-webkit-inner-spin-button {
     color: #94b9d2;
 }
 
+/* map */
+.map img{
+    display: block;
+}
 
 /* Footer block*/
 .footer-index{
@@ -893,7 +921,7 @@ input::-webkit-inner-spin-button {
 
 .booking:active{
     background-color: #503e33;
-    color: #928a85;
+    color:rgb(255,255,255, 0.3);
 }
 .rating{
     width:112px;
