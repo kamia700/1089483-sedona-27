@@ -380,7 +380,6 @@ img{
 
     background-color: #f2f2f2;
     border: 1px solid #f2f2f2;
-    /* border:none; */
 }
 
 .search-item label {
@@ -444,7 +443,6 @@ input::-webkit-inner-spin-button {
 
 .search-item input:hover {
     background-color: #ebebeb;
-    /* border: 1px solid #f2f2f2; */
 }
 
 .search-item input:focus {
