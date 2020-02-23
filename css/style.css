@@ -71,8 +71,6 @@ img{
     position:relative;
 }
 
-/* пришлось задать  z-index: 1 так как 
-лого ушел под фон */
 .main-header-logo {
     width: 140px;
     height: 70px;
@@ -144,8 +142,7 @@ img{
     text-align: center;
 
     background-color: #81B3D2;
-    background-image: 
-                        url("../img/bg-index.jpg");
+    background-image: url("../img/bg-index.jpg");
     background-repeat:  no-repeat;
     background-size: auto; 
     background-position:center;   
@@ -432,7 +429,7 @@ input[type="text"]:-ms-input-placeholder{
     opacity: 1;
 }
 
-input[type='number'] {
+.search-item input[type='number'] {
     -moz-appearance:textfield;
 }
 
@@ -687,6 +684,8 @@ input::-webkit-inner-spin-button {
 .filter {
     color: #ffffff;
 
+    padding: 25px 70px;
+
     background-color: #314c5c;
     background-image: url("../img/bg-inner.jpg");
     background-repeat: no-repeat;
@@ -697,45 +696,226 @@ input::-webkit-inner-spin-button {
     display:flex;
 }
 
+.filter-menu fieldset {
+    border:0 none;
+    padding-right: 90px;
+}
+
 .filter-option ul{
     margin: 0;
     padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.filter li {
-    list-style: none;
+.filter-menu fieldset {
+    border:0 none;
+    padding-right: 90px;
 }
+
+.filter-option legend {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+.filter-option li {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.filter li:last-child {
+    margin-bottom: 0px;
+}
+
+.filter-menu fieldset:last-child {
+    margin-left:auto;
+}
+
+.filter-checkbox{
+    position: relative;
+
+    padding-left: 40px;
+
+    cursor: pointer;
+}
+
+.checkbox-indicator{
+    position: absolute;
+
+    width: 23px;
+    height: 23px;
+
+    top: auto;  
+    left: 0;
+
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23'%3E%3Cpath fill='%23FFFFFF' d='M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z'/%3E%3C/svg%3E%0A");
+    
+}
+
+.check-input:checked + .checkbox-indicator{
+    width: 27px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='23' viewBox='0 0 27 23'%3E%3Cpath fill='%23FFFFFF' d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3Cpath fill='%23FFFFFF' d='M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z'/%3E%3C/svg%3E ");    
+}
+
+.check-input:disabled + .checkbox-indicator{
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23'%3E%3Cpath fill='%236a6a6a' d='M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z'/%3E%3C/svg%3E%0A");
+}
+
+.check-input:checked:disabled + .checkbox-indicator{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='23' viewBox='0 0 27 23'%3E%3Cpath fill='%236a6a6a' d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3Cpath fill='%236a6a6a' d='M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z'/%3E%3C/svg%3E ");    
+}
+
 
 .filter-range{
+    width: 330px;
+
+    color: #ffffff;
+    text-transform: uppercase;
+
     display:flex;
     flex-direction: column;
 }
 
-
-.filter-menu fieldset {
-    border:0 none;
-}
-
-.filter legend {
+.filter-range legend {
     font-size: 16px;
     line-height: 21px;
     font-weight: 700;
+
+    margin-bottom: 9px;
+    color: #ffffff;
+}
+
+.price-controls {
+    position: relative;
+
+    height: 36px;
+    margin-bottom: 20px;
+
+    font-size: 0;
+  
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+}
+
+.price-controls input,
+.price-controls label{
+    box-sizing: content-box;
+}
+
+.price-controls::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+  
+    width: 2px;
+    height: 22px;
+  
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+    display: inline-block;
+  
+    font-size: 14px;
+    line-height: 21px;
+    vertical-align: middle;
+  
+    cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+    width: 90px;
+    padding-left: 65px;
+}
+
+.price-controls input {
+    width: 50px;
+    margin: 0;
+  
+    color: inherit;
+    font: inherit;
+  
+    background: none;
+    border: none;
+}
+
+.range-controls {
+    position: relative;
+  
+    margin-bottom: 32px;
+}
+
+.range-controls .scale {
+    height: 2px;
+  
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+    width: 80%;
+    height: 2px;
+  
+    background: #ffffff;
+}
+
+.range-toggle {
+    position: absolute;
+    top: -9px;
+
+    width: 4px;
+    height: 4px;
+  
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+}
+
+.range-toggle:hover {
+    background: #1c4f80;
+}
+
+.range-toggle-min {
+    left: 0;
+}
+  
+.range-toggle-max {
+    left: 80%;
 }
 
 .filter-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 6px 35px;
+  
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
     color: #ffffff;
-
-    background-color: transparent;
+    text-transform: uppercase;
+  
+    background: transparent;
     border: 2px solid #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
 }
 
-.filter-btn:hover,
-.filter-btn:focus {
-  color: #000000;
-  background-color: #ffffff;
+.price-controls input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+.filter-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
 }
 
 
@@ -768,6 +948,23 @@ input::-webkit-inner-spin-button {
 
 .sorting-arrow{
     margin-left: auto;
+}
+
+.sorting-dir-up path,
+.sorting-dir-down path{
+    fill: #cacaca;
+}
+
+.sorting-dir-up:hover path,
+.sorting-dir-down:hover path,
+.sorting-dir-up:focus path,
+.sorting-dir-down:focus path{
+    fill: #000000;
+}
+
+.sorting-dir-up:active path,
+.sorting-dir-down:active path{
+    fill: #81b3d2;
 }
 
 .sorting-list p{
@@ -837,7 +1034,6 @@ input::-webkit-inner-spin-button {
     padding: 30px 70px;
 
     display:flex;
-    justify-content: center;
     align-content:center;
     align-items:flex-start;
 }

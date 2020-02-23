@@ -35,16 +35,25 @@
               <legend>Инфраструктура:</legend>
               <ul>
                 <li>
-                  <input type="checkbox" name="hotel" id="pool" checked>
-                  <label for="pool">Бассейн</label>
+                  <label class="filter-checkbox pool">
+                    <input class="check-input visually-hidden" type="checkbox" name="pool" checked disabled>
+                    <span class="checkbox-indicator"></span>
+                    Бассейн
+                  </label>
                 </li>
                 <li>
-                  <input type="checkbox" name="parking" id="parking">
-                  <label for="parking">Парковка</label>
+                  <label class="filter-checkbox parking">
+                    <input class="check-input visually-hidden" type="checkbox" name="parking" >
+                    <span class="checkbox-indicator"></span>
+                    Парковка
+                  </label>
                 </li>
                 <li>
-                  <input type="checkbox" name="Wi-Fi" id="Wi-Fi">
-                  <label for="Wi-Fi">Wi-Fi</label>
+                  <label class="filter-checkbox Wi-Fi">
+                    <input class="check-input visually-hidden" type="checkbox" name="Wi-Fi" id="Wi-Fi">
+                    <span class="checkbox-indicator"></span>
+                    Wi-Fi
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -53,35 +62,53 @@
               <legend>Тип жилья:</legend>
               <ul>
                 <li>
-                  <input type="checkbox" name="hotel" id="hotel">
-                  <label for="hotel">Гостиница</label>
+                  <label class="filter-checkbox hotel">
+                    <input class="check-input visually-hidden" type="checkbox" name="hotel">
+                    <span class="checkbox-indicator"></span>
+                    Гостиница
+                  </label>
                 </li>
                 <li>
-                  <input type="checkbox" name="motel" id="motel" checked>
-                  <label for="motel">Мотель</label>
+                  <label class="filter-checkbox motel">
+                    <input class="check-input visually-hidden" type="checkbox" name="motel" checked>
+                    <span class="checkbox-indicator"></span>
+                    Мотель
+                  </label>
                 </li>
                 <li>
-                  <input type="checkbox" name="apartments" id="apartments" checked>
-                  <label for="apartments">Апартаменты</label>
+                  <label class="filter-checkbox apartments">
+                    <input class="check-input visually-hidden" type="checkbox" name="apartments" checked>
+                    <span class="checkbox-indicator"></span>
+                    Апартаменты
+                  </label>
                 </li>
               </ul>
             </fieldset>
 
             <fieldset class="filter-option">
               <div class="filter-range">
-                <legend>Стоимость в сутки (Р):</legend>
-                <label for="min-cost" aria-label="Выбрать минимальную стоимость">От</label>
-                <input type="number" name="min-cost" id="min-cost" value="0">
+                <legend class="filter-range-title">Стоимость в сутки (Р):</legend>
 
-                <label for="max-cost" aria-label="Выбрать максимальную стоимость">До</label>
-                <input type="number" name="max-cost" id="max-cost" value="3000">
+                <div class="price-controls">
+                  <label class="min-price" aria-label="Выбрать минимальную стоимость">От 
+                  <input type="number" name="min-price" value="0"></label>
+
+                  <label class="max-price" aria-label="Выбрать максимальную стоимость">До 
+                  <input type="number" name="max-price" value="3000"></label>
+                </div>
+              
+
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min" type="button"></div>
+                  <div class="range-toggle range-toggle-max" type="button"></div>
+                </div>
+
+
+                <button class="button filter-btn" type="submit">Показать</button>
               </div>
-              <div>
-                <button class="trackbar-button" type="button"></button>
-                <div></div>
-                <button class="trackbar-button" type="button"></button>
-              </div>
-              <button class="button filter-btn" type="submit">Показать</button>
             </fieldset>
             
           </form>
@@ -106,8 +133,12 @@
           </div>
 
           <div class="sorting-arrow">
-            <a class="sorting-up-dir" href="#" aria-label="Стрелка вверх"></a>
-            <a class="sorting-down-dir" href="#" aria-label="Стрелка вниз"></a>
+            <a class="sorting-dir-up" href="#" aria-label="Стрелка вверх">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
+            </a>
+            <a class="sorting-dir-down" href="#" aria-label="Стрелка вниз">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+            </a>
           </div>
         </section>
 
