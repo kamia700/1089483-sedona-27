@@ -1053,7 +1053,6 @@ input::-webkit-inner-spin-button {
     padding: 30px 70px;
 
     display:flex;
-    /* align-content:center; */
     align-items:flex-start;
 }
 
@@ -1069,8 +1068,6 @@ input::-webkit-inner-spin-button {
     flex-shrink: 0;  
 } 
 
-/*при переполнении текст растягивает блок в высоту,
-а не в ширину. Не могу найти причину */
 .property{
     display:flex; 
     flex-direction: column;
