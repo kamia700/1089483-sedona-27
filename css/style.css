@@ -795,9 +795,6 @@ input::-webkit-inner-spin-button {
 
     color: #ffffff;
     text-transform: uppercase;
-
-    display:flex;
-    flex-direction: column;
 }
 
 .filter-range legend {
@@ -844,7 +841,7 @@ input::-webkit-inner-spin-button {
   
     font-size: 14px;
     line-height: 21px;
-    vertical-align: middle;
+    vertical-align: top;
   
     cursor: pointer;
 }
@@ -886,6 +883,8 @@ input::-webkit-inner-spin-button {
 }
 
 .range-toggle {
+    box-sizing: content-box;
+    
     position: absolute;
     top: -9px;
 
@@ -893,7 +892,7 @@ input::-webkit-inner-spin-button {
     height: 4px;
   
     background: #ababab;
-    border: 8px solid #ffffff;
+    border: 10px solid #ffffff;
     border-radius: 50%;
     box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
     cursor: pointer;
