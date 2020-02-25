@@ -968,6 +968,10 @@ input::-webkit-inner-spin-button {
 
 .sorting-arrow{
     margin-left: auto;
+
+    display: flex;
+    min-width: 37px;
+    justify-content: space-between;   
 }
 
 .sorting-dir-up path,
@@ -984,6 +988,10 @@ input::-webkit-inner-spin-button {
 
 .sorting-dir-up:active path,
 .sorting-dir-down:active path{
+    fill: #81b3d2;
+}
+
+.sorting-dir-current path{
     fill: #81b3d2;
 }
 
