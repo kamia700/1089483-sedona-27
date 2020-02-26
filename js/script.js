@@ -10,21 +10,26 @@ var childen = localStorage.getItem("childen");
 var isStorageSupport = true;
 var storage = "";
 
+try{
+    storage = localStorage.getItem("adults");
+    storage = localStorage.getItem("childen");
+} catch (err) {
+    isStorageSupport = false;
+}
+
 buttonOpen.addEventListener("click", function(evt) {
     evt.preventDefault();
     form.classList.toggle("activeForm");
     dataCheckin.focus();  
-    if (storage) {
-        adults.value = storage;
-        childen.value = childen;
-    }
 });
 
 
 form.addEventListener("submit", function (evt) {
     if (!dataCheckin.value || !dataCheckout.value) {
         evt.preventDefault();
-      console.log("Необходимо ввести даты поездки!");
+        form.classList.remove("form-error");
+        form.offsetWidth = form.offsetWidth;
+        form.classList.add("form-error");
     } else {
         if (isStorageSupport) {
             localStorage.setItem("adults", adults.value);
@@ -34,9 +39,4 @@ form.addEventListener("submit", function (evt) {
 });
 
 
-try{
-    storage = localStorage.getItem("adults");
-    storage = localStorage.getItem("childen");
-} catch (err) {
-    isStorageSupport = false;
-}
+
