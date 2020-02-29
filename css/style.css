@@ -369,6 +369,8 @@ img {
 
     width: 570px;
     height: 395px;
+
+    z-index: 3;
     
     overflow: auto;
     margin: auto;
@@ -423,8 +425,6 @@ img {
       transform: translateX(10px);
     }
 }
-
-
 
 .form-error {
     animation: shake 0.6s;
@@ -641,10 +641,23 @@ input::-webkit-inner-spin-button {
 
 
 /* map */
+.map{
+    position: relative;
+}
 
 .map img {
     display: block;
+    z-index: 0;
 }
+
+.map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+}
+
 
 
 /* Footer block*/
@@ -659,6 +672,8 @@ input::-webkit-inner-spin-button {
 
 .main-footer {
     background-color: rgba(253, 253, 253);
+
+    z-index: 1;
 
     margin: 0;
     padding-top: 33px;

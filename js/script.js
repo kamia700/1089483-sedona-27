@@ -4,15 +4,13 @@ var dataCheckin = form.querySelector(".search-date-checkin");
 var dataCheckout = form.querySelector(".search-date-checkout");
 var adults = form.querySelector(".amountAdults");
 var childen = form.querySelector(".amountChildren");
-var storage = localStorage.getItem("adults");
-var childen = localStorage.getItem("childen");
 
 var isStorageSupport = true;
 var storage = "";
 
 try{
-    storage = localStorage.getItem("adults");
-    storage = localStorage.getItem("childen");
+    storageAdults = localStorage.getItem("adults");
+    storageChilden = localStorage.getItem("childen");
 } catch (err) {
     isStorageSupport = false;
 }
@@ -37,6 +35,4 @@ form.addEventListener("submit", function (evt) {
         }
     }
 });
-
-
 
