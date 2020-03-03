@@ -159,7 +159,7 @@ img {
 .intro-block img {
     display: block;
     margin: auto;
-    padding: 80px 0;
+    padding: 77px 0;
 
     max-width: 100%;
     height: auto;
@@ -183,7 +183,7 @@ img {
     color: #333333;
     background-color: #ffffff;
 
-    padding-top: 54px;
+    padding-top: 58px;
     padding-bottom: 50px;
 }
 
@@ -201,7 +201,7 @@ img {
     font-size: 21px;
     line-height: 26px;
 
-    margin-bottom: 27px;
+    margin-bottom: 30px;
 }
 
 .intro-text p {
@@ -316,17 +316,22 @@ img {
 }
 
 .search {
-    text-align: center;
-
     background-color: #ffffff;
-    padding-top: 24px;
+
+    padding-top: 52px;
+}
+
+.search h2,
+.search-text{
+    text-align: center;
+    margin: 0 auto;   
 }
 
 .search h2 {
     line-height: 36px;
     font-size: 30px;
 
-    margin-bottom: 22px;
+    margin-bottom: 23px;
 }
 
 .search-text {
@@ -336,16 +341,17 @@ img {
     margin: 0 auto;
     width: 440px;
 
-    margin-bottom: 48px;
+    margin-bottom: 46px;
 }
 
 .button-open {
+    display: block;
     font-size: 21px;
     line-height: 26px;
     background-color: #766357;
 
     padding: 30px 140px;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .button-open:hover,
@@ -394,7 +400,7 @@ img {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
 }
 
@@ -441,6 +447,7 @@ img {
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .search-item input {
@@ -451,10 +458,11 @@ img {
     color: #000000;
    
     margin: 0;
+    margin-left: auto;
     padding: 7px;
-    padding-left: 14px;
+    padding-left: 11px;
 
-    flex-grow: 1;
+    width: 345px;
 
     background-color: #f2f2f2;
     border: 2px solid transparent;    
@@ -465,13 +473,12 @@ img {
     
     align-self: center;
 
-    margin-right: 20px;
 }
 
 .calendar-icon {
     position: absolute;
 
-    right: 3px;
+    right: 2px;
     top: 50%;
     transform: translateY(-50%);
 
@@ -540,19 +547,19 @@ img {
 
 .adults,
 .children {
-    margin: 0;
     width: 50%;
+    margin: 0;
 
     display: flex;
-    justify-content: space-between;
-    align-content: space-between;
+    align-items: center;
 }
 
 .quantity {
-    display: flex;
-    justify-content: center;
-    align-content: center;
     width: 50%;
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
 }
 
 .quantity input,
@@ -570,10 +577,12 @@ img {
 .plus-icon {
     position: relative;
 
+    width: 38px;
+    height: 38px;
+
     background-color: #f2f2f2;
     border: none;
     
-    padding: 15px;
     margin: 0;
 
     cursor: pointer; 
@@ -583,25 +592,31 @@ img {
     content: "";
     position: absolute;
 
-    margin: auto;
-    top: 19px;
-    left: 14px;
     width: 12px;
     height: 3px;
     background-color: #a9a9a9;
+
+    margin: auto;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
 }
 
 .plus-icon::before,
 .plus-icon::after {
     content: "";
     position: absolute;
-    margin: auto;
-    top: 19px;
-    right: 13px;
+
     width: 12px;
     height: 3px;
-    background-color: #a9a9a9;
+    background-color: #a9a9a9; 
     
+    margin: auto;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
 }
 
 .plus-icon::after {
