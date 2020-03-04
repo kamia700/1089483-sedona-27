@@ -1,6 +1,6 @@
 
 body {
-    font-family: 'PT Sans', Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     color: #000000;
@@ -244,8 +244,6 @@ img {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    align-items: center;
-    align-content: center;
 }
 
 .features h2,
@@ -253,6 +251,8 @@ img {
     text-align: center;
     margin: 0;
     margin-bottom: 22px;
+
+    width: 100%;
 }
 
 .features h2 {
@@ -448,6 +448,10 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* flex-grow: 1; */
+
+    /* outline: 1px solid #cb1735; */
+
 }
 
 .search-item input {
@@ -459,10 +463,11 @@ img {
    
     margin: 0;
     margin-left: auto;
-    padding: 7px;
+    /* padding: 7px; */
     padding-left: 11px;
 
     width: 345px;
+    height: 38px;
 
     background-color: #f2f2f2;
     border: 2px solid transparent;    
@@ -527,7 +532,7 @@ img {
     opacity: 1;
 }
 
-.search-item input[type='number'] {
+.search-item input[type="number"] {
     -moz-appearance: textfield;
 }
 
@@ -565,8 +570,12 @@ img {
 .quantity input,
 .quantity input {
     text-align: center;
-    width: 40px;
+
+    width: 38px;
     margin: 0;
+    padding: 0;
+
+    /* outline: 1px solid #262626; */
 }
 
 .children label {
