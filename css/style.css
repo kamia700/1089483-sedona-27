@@ -76,7 +76,7 @@ img {
 
     width: 140px;
     height: 70px;
-    
+
     left: 50%;
     top: 0;
     transform: translateX(-50%);
@@ -324,7 +324,7 @@ img {
 .search h2,
 .search-text{
     text-align: center;
-    margin: 0 auto;   
+    margin: 0 auto;
 }
 
 .search h2 {
@@ -374,13 +374,13 @@ img {
     padding: 55px 57px;
 
     width: 570px;
-    height: 395px;
+    min-height: 395px;
 
     z-index: 3;
-    
+
     overflow: auto;
     margin: auto;
-    top: 86px; 
+    top: 86px;
     left: 0;
     right: 0;
 
@@ -400,7 +400,8 @@ img {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
+
+    /* justify-content: space-between; */
     box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
 }
 
@@ -415,7 +416,7 @@ img {
     100% {
         transform: inherit;
     }
-  
+
     10%,
     30%,
     50%,
@@ -423,7 +424,7 @@ img {
     90% {
       transform: translateX(-10px);
     }
-  
+
     20%,
     40%,
     60%,
@@ -435,7 +436,7 @@ img {
 .form-error {
     animation: shake 0.6s;
 }
-  
+
 .search-item {
     position: relative;
 
@@ -460,24 +461,24 @@ img {
     font: inherit;
     text-transform: uppercase;
     color: #000000;
-   
+
     margin: 0;
     margin-left: auto;
     /* padding: 7px; */
     padding-left: 11px;
+    padding-right: 32px;
 
     width: 345px;
-    height: 38px;
+    min-height: 38px;
 
     background-color: #f2f2f2;
-    border: 2px solid transparent;    
+    border: 2px solid transparent;
 }
 
 .search-item label {
     position: relative;
-    
-    align-self: center;
 
+    align-self: center;
 }
 
 .calendar-icon {
@@ -509,7 +510,7 @@ img {
 .search-item input[type="text"]::-moz-placeholder,
 .search-item input[type="text"]:-moz-placeholder {
     color: #000000;
-    opacity: 1;    
+    opacity: 1;
 }
 
 .search-item input[type="text"]::placeholder {
@@ -567,8 +568,7 @@ img {
     align-items: center;
 }
 
-.quantity input,
-.quantity input {
+.quantity input{
     text-align: center;
 
     width: 38px;
@@ -591,10 +591,10 @@ img {
 
     background-color: #f2f2f2;
     border: none;
-    
+
     margin: 0;
 
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .minus-icon::before {
@@ -606,9 +606,9 @@ img {
     background-color: #a9a9a9;
 
     margin: auto;
-    top: 0; 
-    left: 0; 
-    bottom: 0; 
+    top: 0;
+    left: 0;
+    bottom: 0;
     right: 0;
 }
 
@@ -619,12 +619,12 @@ img {
 
     width: 12px;
     height: 3px;
-    background-color: #a9a9a9; 
-    
+    background-color: #a9a9a9;
+
     margin: auto;
-    top: 0; 
-    left: 0; 
-    bottom: 0; 
+    top: 0;
+    left: 0;
+    bottom: 0;
     right: 0;
 }
 
@@ -653,7 +653,7 @@ img {
 
     font-size: 21px;
     line-height: 26px;
-    
+
     background-color: #81b3d2;
 }
 
@@ -754,7 +754,7 @@ img {
 .social-button {
     width: 47px;
     height: 47px;
-    
+
     background-color: #81b3d2;
     margin-bottom: 5px;
 
@@ -775,7 +775,7 @@ img {
 
 .footer-copyright {
     color: #262626;
-    
+
     width: 33.33%;
     margin: 0;
 
@@ -947,7 +947,7 @@ img {
 
     color: inherit;
     font: inherit;
-    
+
     background: none;
     border: none;
 
@@ -1009,7 +1009,7 @@ img {
     border: 8px solid #ffffff;
     border-radius: 50%;
     box-shadow: 0 3px 1px 0 rgba(250, 250, 250, 0.2);
-    
+
     cursor: pointer;
 }
 
@@ -1145,7 +1145,7 @@ img {
 }
 
 .sorting-item a:active {
-    color: #000000; 
+    color: #000000;
     border-bottom: none;
 }
 
