@@ -1096,7 +1096,7 @@ img {
     cursor: pointer;
 }
 
-.price-controls input[type='number'] {
+.price-controls input[type="number"] {
     -moz-appearance: textfield;
 }
 
